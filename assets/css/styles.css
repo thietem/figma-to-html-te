@@ -44,6 +44,18 @@ a {
   font-size: 3.8rem;
   line-height: 1.27;
 }
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.break-all {
+  word-break: break-all;
+}
 /* header */
 .header {
   background-color: #fffcf4;
@@ -282,6 +294,7 @@ a {
   gap: 30px;
 }
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
 }
@@ -326,7 +339,7 @@ a {
   margin-top: 6px;
   color: #5f5b53;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 16px;
   line-height: 1.86;
 }
 .popular .course-item .foot {
